@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Tell Tailwind which files to scan for class names.
+   Paths are relative to this file (src/). */
+@source "../index.html";
+@source "../projects/**/*.html";
+@source "../projects/**/*.js";

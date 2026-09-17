@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
+  <link rel="stylesheet" href="../../dist/output.css">
+</head>
+
+<body class="min-h-screen bg-slate-900 text-slate-100 flex items-center justify-center p-6">
+
+  <main class="w-full max-w-sm text-center">
+
+    <a href="../../index.html" class="text-sm text-slate-400 hover:text-slate-200">&larr; All projects</a>
+
+    <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-lg">
+
+      <div id="timer" class="text-4xl font-semibold tabular-nums tracking-tight sm:text-5xl">
+        00:00:00:00
+      </div>
+
+      <div class="mt-8 flex justify-center gap-3">
+        <button id="start" type="button"
+          class="cursor-pointer rounded-2xl bg-emerald-500 px-6 py-2.5 font-medium text-slate-900 transition hover:bg-emerald-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300">
+          Start
+        </button>
+
+        <button id="stop" type="button"
+          class="cursor-pointer rounded-2xl border border-white/20 bg-white/10 px-6 py-2.5 font-medium transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60">
+          Stop
+        </button>
+
+        <button id="reset" type="button"
+          class="cursor-pointer rounded-2xl border border-white/20 bg-white/10 px-6 py-2.5 font-medium transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60">
+          Reset
+        </button>
+      </div>
+
+      <p class="mt-6 text-xs text-slate-400">hours : minutes : seconds : hundredths</p>
+
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

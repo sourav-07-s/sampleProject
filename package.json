@@ -1,0 +1,14 @@
+{
+  "name": "web-dev-projects",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A collection of small front-end projects built while learning JavaScript and Tailwind CSS.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "tailwindcss": "^4.2.0"
+  }
+}

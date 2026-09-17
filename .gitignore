@@ -1,0 +1,16 @@
+# Dependencies — reinstall with `npm install`, never commit these
+node_modules/
+
+# Build output (delete this line if you deploy straight from the repo,
+# e.g. GitHub Pages, since the CSS must be committed for the site to work)
+# dist/
+
+# Editor & OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

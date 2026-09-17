@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛅</text></svg>">
+  <link rel="stylesheet" href="../../dist/output.css">
+</head>
+
+<body id="page"
+  class="h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat text-white bg-[url('https://media.istockphoto.com/id/2153573059/photo/mountain-covered-with-a-coniferous-fir-tree-forest-scenic-landscape-from-carpathian-mountains.jpg?s=612x612&w=0&k=20&c=v6knuIrkHfIdKK4Bzdrr2P0C4TSrAQJgIFUPQ5CQpdw=')]">
+
+  <!-- Background video, swapped to match the current conditions -->
+  <video id="bgVideo" autoplay muted loop playsinline
+    class="fixed top-0 left-0 w-full h-full object-cover -z-10 hidden"></video>
+
+  <a href="../../index.html" class="fixed top-4 left-4 text-sm text-white/80 hover:text-white">&larr; All projects</a>
+
+  <div class="w-75 text-center">
+
+    <form id="weatherForm" class="flex items-center gap-2 m-3">
+      <label for="cityName" class="sr-only">City name</label>
+      <input id="cityName" type="text" autocomplete="off" placeholder="Enter your city name"
+        class="rounded-4xl p-2.5 flex-1 text-center font-bold bg-white/10 text-black backdrop-blur-md border border-white/20 placeholder:text-black/60">
+
+      <button id="searchBtn" type="submit"
+        class="rounded-2xl px-5 h-10 cursor-pointer bg-white font-semibold text-black backdrop-blur-md border border-white/20">
+        Search
+      </button>
+    </form>
+
+    <!-- City, temperature, description -->
+    <div class="mb-5 flex justify-center flex-col items-center">
+      <h2 id="displayCityName" class="text-xl font-medium"></h2>
+      <div id="temp" class="text-[70px] font-bold">0&deg;</div>
+      <p id="weather" class="font-extrabold text-2xl"></p>
+    </div>
+
+    <!-- Glass card -->
+    <div class="p-5 rounded-3xl backdrop-blur-lg bg-white/20 shadow-xl">
+
+      <div class="flex justify-center mb-5">
+        <div id="logo" class="text-5xl mb-1"></div>
+      </div>
+
+      <div class="text-sm space-y-1">
+        <p id="humidity"></p>
+        <p id="wind"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
